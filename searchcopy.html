@@ -1,0 +1,101 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+	  <title>University Database (UEMK)</title>
+	
+	<link rel="shortcut icon"  type="image/png" href="favicon.png">
+
+ <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	* {box-sizing: border-box;}
+
+	.topnav input[type=text] {
+	margin-left:35%;
+	padding: 6px;
+	margin-top: 2%;
+	font-size: 17px;
+	}
+	.topnav input[type=text] {
+	border: 1px solid #ccc;  
+	}
+	.topnav button[type=submit]
+	{
+		background:#1F1275;
+		color:white;
+		padding:0.40%;	
+		width:6%;
+	}
+	.container
+	{
+	margin:5% 15% 5% 15%;
+		padding:5%;
+		border:1px solid black;
+	    top:50%;
+	}
+	.right button[type=submit]
+	{
+	    float:right;
+	    background:#1F1275;
+		color:white;
+		width:13%;
+		padding:1.5%;	
+		top:100%;
+	}
+	a
+	{
+	    color:white;
+	}
+	</style>
+	</head>
+	<body>
+		<form action="search.php" method="POST">
+			<div class="topnav">
+				<input type="text" placeholder="Search by mobile number..." name="search">
+				<button type="submit">Search</button>
+			</div>
+		</form>
+        <div class="container">
+   
+   <div  class= "right">
+				<button type="submit"><a href="https://uemk.000webhostapp.com/photo.php">Photo</a></button>
+    </div>        
+       
+  <label><b>Full Name :</b> ##% name %## </label>
+   <br><br>
+   
+<label><b>Gender : </b> ##% gender %## </label>
+       <br><br>
+     
+     
+         <label><b>Course / Stream :</b> ##% course %## </label>
+     
+     <br><br>
+        
+      <label><b>Email :</b> ##% email %## </label>
+	  <br><br>
+	  
+      
+      <label><b>Mobile Number :</b> ##% mobile %##
+ </label>
+      
+     <br><br>
+     
+     <label><b>Parent : </b> ##% parent %## </label>
+     <br><br>
+     
+     <label><b>Parent's Mobile Number : </b> ##% parentmob %## </label>
+     
+      <br><br>
+      <label><b>Address :</b> ##% address %## </label>
+      <br><br> 
+      </div>
+      
+      		<form action="edit.php" method="POST">
+				<button type="submit">Search</button>
+		    </form>
+        
+	</body>
+	</html>

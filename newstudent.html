@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon"  type="image/png" href="favicon.png">
+<style>
+
+@import url('https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css');
+#blah {
+  border-radius: 50%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:pointer;
+}
+
+#fileToUpload {
+  display: none;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #0C1675;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+#3343E1
+}
+button:hover {
+    background-color: #3343E1;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.right
+{
+   float:right;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body  bgcolor="#eee" >
+    
+ <form class="modal-content animate" action="newstudent.php" method="post" enctype="multipart/form-data" >
+     
+      <div class="container">
+           <img id="blah" src="profile-img.png"/>
+    <input name="fileToUpload" id="fileToUpload" type="file" placeholder="Photo" onchange="readURL(this);" />
+       
+  <label><b>First Name :</b></label>
+      <input type="text" placeholder="Enter First Name" name="fname" required>
+      
+      <label><b>Last Name :</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lname" required><br><br>
+        
+        <label><b>Gender : </b></label>
+        <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+     
+     <div class="right">
+         <label><b>Course / Stream :</b></label>
+     <select name ="course">
+        <option value="B-tech/CSE">B-tech/CSE</option>
+        <option value="B-tech/EE">B-tech/EE</option>
+        <option value="B-tech/ECE">B-tech/ECE</option>
+        <option value="B-tech/Mechanical">B-tech/Mechanical</option>
+        <option value="B-tech/Civil">B-tech/Civil</option>
+        <option value="BBA">BBA</option>
+        <option value="Hotel Management">Hotel Management</option>
+        <option value="Law">Law</option>
+        <option value="M-tech/CSE">M-tech/CSE</option>
+        <option value="M-tech/EE">M-tech/EE</option>
+        <option value="M-tech/ECE">M-tech/ECE</option>
+        <option value="M-tech/Mechanical">M-tech/Mechanical</option>
+        <option value="M-tech/Civil">M-tech/Civil</option>
+        <option value="MBA">MBA</option>
+    </select>
+     </div>
+     <br><br>
+        
+      <label><b>Email :</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      
+      <label><b>Mobile Number :</b></label>
+      <input type="text" placeholder="Enter Student's mobile number" name="mob" required>
+     <br><br>
+     
+     <label><b>Parent : </b></label>
+      <input type="radio" name="parent" value="father or mother"> Father/Mother
+     <input type="radio" name="parent" value="other"> Other<br><br>
+     
+     <label><b>Mobile Number :</b></label>
+      <input type="text" placeholder="Enter Parent's mobile number" name="parentmob" required>
+      
+      <label><b>Address :</b></label>
+      <input type="text" placeholder="Enter Address" name="address" required>
+      
+        <button type="submit" class="signupbtn" name="submit">ENTER</button>
+      </div>
+  </form>
+  
+				
+<script>
+
+submitForms = function(){
+    document.getElementById("firstform").submit();
+    document.getElementById("secondform").submit();
+};
+
+$("#blah").click(function(e) {
+$("#fileToUpload").click();
+});
+
+function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+
+reader.onload = function (e) {
+$('#blah')
+.attr('src', e.target.result)
+.width(150)
+.height(150);
+};
+
+reader.readAsDataURL(input.files[0]);
+}
+}
+
+</script>
+
+</body>
+</html>

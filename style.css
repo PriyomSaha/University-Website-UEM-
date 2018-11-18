@@ -1,0 +1,45 @@
+
+  
+.header-banner {
+  background-image: url('https://www.iemcrp.com/iemEn/uemLogoKol280718.jpg');
+  background-position:center;
+  background-repeat:no-repeat;
+  height:100px;
+  width: 100%;
+  margin-bottom:1%;
+  }
+
+
+/* demo */
+body 
+{ 
+ background-image: linear-gradient(white, #e6e6fa);
+  color: #292f36;
+  font-family: helvetica;
+  
+}
+#content
+{
+	padding:2%;
+}
+#content h2
+{
+	text-align:center;
+}
+
+body{
+    font-family: "Comic Sans MS", cursive, sans-serif; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; font-size: 20px;
+}
+
+#footer{
+	border-top: 1px #ccc solid;
+	margin-top: 50px;
+	margin-right: 10px;
+}
+	#footer p{
+		text-align: right;
+		padding:0px 15px;
+		text-transform: uppercase;
+		font-size: 80%;
+		color:#00001E;
+	}
